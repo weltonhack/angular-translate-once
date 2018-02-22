@@ -50,13 +50,21 @@
       restrict: 'A',
       priority: -1,
       link: function (scope, element, attrs) {
-        var translateValues = {};
+        var translateValues = {},
+            translationKey = attrs[DIRECTIVE_NAME];
+
+        // if the attribute doesn't have a value, use the element's text
+        if (!translationKey) {
+          translationKey = element.text().trim();
+        }
+
         // if we have custom values, interpret them
         if (attrs.translateValues) {
           translateValues = $parse(attrs.translateValues)(scope);
         }
+
         // queue the translation
-        $translate(attrs[DIRECTIVE_NAME], translateValues).then(function (translation) {
+        $translate(translationKey, translateValues).then(function (translation) {
           // update the element with the translation
           element.html(translation);
 
