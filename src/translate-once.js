@@ -1,3 +1,10 @@
+/*!
+ * translate-once - v1.0.4
+ * 
+ * https://github.com/weltonhack/angular-translate-once
+ * 
+ * Licensed MIT
+ */
 (function () {
   'use strict';
   var MODULE_NAME = 'pascalprecht.translate',
@@ -33,7 +40,7 @@
           translateValues = $parse(attrs.translateValues)(scope);
         }
         // queue the translation
-        $translate(attrs[namedDirective], translateValues).then(function (translation) {
+        $translate(attrs[namedDirective], translateValues, undefined, '? ' + attrs[namedDirective] + ' ?').then(function (translation) {
           // update the element with the translation
           element.attr(attribute, translation);
         });
@@ -64,7 +71,7 @@
         }
 
         // queue the translation
-        $translate(translationKey, translateValues).then(function (translation) {
+        $translate(translationKey, translateValues, undefined, '? ' + translationKey + ' ?').then(function (translation) {
           // update the element with the translation
           element.html(translation);
 

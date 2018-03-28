@@ -1,6 +1,6 @@
 {
   "name": "angular-translate-once",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Angular translate one-time directive",
   "main": "src/translate-once.js",
   "directories": {
@@ -22,7 +22,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/ajwhite/angular-translate-once.git"
+    "url": "https://github.com/weltonhack/angular-translate-once.git"
   },
   "keywords": [
     "angular-translate",
@@ -32,7 +32,7 @@
   "author": "Atticus White <contact@atticuswhite.com> (http://atticuswhite.com/)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/ajwhite/angular-translate-once/issues"
+    "url": "https://github.com/weltonhack/angular-translate-once/issues"
   },
-  "homepage": "https://github.com/ajwhite/angular-translate-once"
+  "homepage": "https://github.com/weltonhack/angular-translate-once"
 }
